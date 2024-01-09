@@ -7,7 +7,7 @@ class CountryData:
     _instance = None
     _data_loaded = False
 
-    # add comment just to trigger the workflow
+    # add comment to trigger workflow
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(CountryData, cls).__new__(cls)
