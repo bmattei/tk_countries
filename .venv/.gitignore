@@ -139,3 +139,5 @@ dmypy.json
 .*.swp
 *.*~
 
+__pycache__/
+*.pyc
