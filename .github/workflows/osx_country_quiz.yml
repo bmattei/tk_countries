@@ -33,8 +33,7 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build with PyInstaller
-      run: pyinstaller --onefile --no-code-sign --macos-sdk-version 10.9 country_quiz.py
-
+      run: pyinstaller --onefile country_quiz.py
 
     - name: Upload Executable
       uses: actions/upload-artifact@v2

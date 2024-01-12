@@ -15,6 +15,7 @@ a = Analysis(
 )
 pyz = PYZ(a.pure)
 
+
 exe = EXE(
     pyz,
     a.scripts,
@@ -34,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    **{'codesign-identity': None, 'entitlements_file': None, 'no_archive': False, 'macos_min': '10.9', 'console': True}
 )
