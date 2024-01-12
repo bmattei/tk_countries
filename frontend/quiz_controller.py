@@ -91,6 +91,3 @@ class QuizController:
         self.root.mainloop()
 
 
-if __name__ == "__main__":
-    controller = QuizController()
-    controller.start_quiz()

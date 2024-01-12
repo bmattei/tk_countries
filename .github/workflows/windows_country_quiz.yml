@@ -26,7 +26,7 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build with PyInstaller
-      run: pyinstaller --onefile frontend/quiz_controller.py
+      run: pyinstaller --onefile country_quiz.py
 
     - name: Upload Executable
       uses: actions/upload-artifact@v2
