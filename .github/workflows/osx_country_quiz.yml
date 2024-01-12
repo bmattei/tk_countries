@@ -22,11 +22,19 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    # New step to install Tcl/Tk (if necessary)
+    - name: Install Tcl/Tk
+      run: brew install tcl-tk
+
+    - name: Install PyInstaller
+      run: pip install pyinstaller
+
     - name: Install PyInstaller
       run: pip install pyinstaller
 
     - name: Build with PyInstaller
-      run: pyinstaller --onefile country_quiz.py
+      run: pyinstaller --onefile --no-code-sign --macos-sdk-version 10.9 country_quiz.py
+
 
     - name: Upload Executable
       uses: actions/upload-artifact@v2
